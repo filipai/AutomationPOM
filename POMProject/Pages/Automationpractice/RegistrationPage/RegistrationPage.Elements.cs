@@ -72,6 +72,9 @@ namespace POMProject.Pages.Automationpractice.RegistrationPage
         public IWebElement Alias => Driver.FindElement(By.Id("alias"));
 
         public IWebElement RegisterButton => Driver.FindElement(By.Id("submitAccount"));
+
+        public IWebElement Email => Driver.FindElement(By.Id("email"));
+
         public IWebElement ErrorMsg => Driver.FindElement(By.XPath("//*[@id='center_column']/div/ol/li"));
     }
 }

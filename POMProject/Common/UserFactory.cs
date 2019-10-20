@@ -95,5 +95,51 @@ namespace POMProject.Common
                 Phone = "3423476786998"
             };
         }
+
+        public static RegistrationUser CreateInvalidPasswordUser()
+        {
+            return new RegistrationUser
+            {
+                FirstName = "James",
+                LastName = "Dean",
+                Year = "1990",
+                Month = "3",
+                Date = "3",
+                Password = "",
+                Gender = "male",
+                PostCode = "54422",
+                RealFirstName = "John",
+                RealLastName = "Smith",
+                Address = "Somwhere",
+                City = "Pernik",
+                State = "5",
+                Alias = "alabala",
+                Country = "COunty",
+                Phone = "3423476786998"
+            };
+        }
+
+        public static RegistrationUser CreateInvalidCityUser()
+        {
+            return new RegistrationUser
+            {
+                FirstName = "James",
+                LastName = "Dean",
+                Year = "1990",
+                Month = "3",
+                Date = "3",
+                Password = "dewf43",
+                Gender = "male",
+                PostCode = "54422",
+                RealFirstName = "John",
+                RealLastName = "Smith",
+                Address = "Somwhere",
+                City = "",
+                State = "5",
+                Alias = "alabala",
+                Country = "COunty",
+                Phone = "3423476786998"
+            };
+        }
     }
 }

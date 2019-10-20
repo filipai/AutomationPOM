@@ -75,6 +75,24 @@ namespace POMProject.Tests
             _regPage.AssertInvalidLastNameRegistration();
         }
 
+        [Test]
+        public void InvalidPasswordRegistration()
+        {
+            _user = UserFactory.CreateInvalidPasswordUser();
+            _regPage.Navigate(_signInPage);
+            _regPage.FillForm(_user);
+            _regPage.AssertInvalidPasswordRegistration();
+        }
+
+        [Test]
+        public void InvalidCityRegistration()
+        {
+            _user = UserFactory.CreateInvalidCityUser();
+            _regPage.Navigate(_signInPage);
+            _regPage.FillForm(_user);
+            _regPage.AssertInvalidCityRegistration();
+        }
+
         [TearDown]
         public void TearDown()
         {
