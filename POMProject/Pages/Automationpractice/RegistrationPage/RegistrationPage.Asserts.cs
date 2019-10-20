@@ -13,5 +13,10 @@ namespace POMProject.Pages.Automationpractice.RegistrationPage
         {
             Assert.AreEqual("firstname is required.", ErrorMsg.Text);
         }
+
+        public void AssertInvalidLastNameRegistration()
+        {
+            Assert.AreEqual("lastname is required.", ErrorMsg.Text);
+        }
     }
 }

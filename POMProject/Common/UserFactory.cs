@@ -72,5 +72,28 @@ namespace POMProject.Common
                 Phone = "3423476786998"
             };
         }
+
+        public static RegistrationUser CreateInvalidLastNameUser()
+        {
+            return new RegistrationUser
+            {
+                FirstName = "James",
+                LastName = "",
+                Year = "1990",
+                Month = "3",
+                Date = "3",
+                Password = "gdsjafgujdsw",
+                Gender = "male",
+                PostCode = "54422",
+                RealFirstName = "John",
+                RealLastName = "Smith",
+                Address = "Somwhere",
+                City = "Pernik",
+                State = "5",
+                Alias = "alabala",
+                Country = "COunty",
+                Phone = "3423476786998"
+            };
+        }
     }
 }
