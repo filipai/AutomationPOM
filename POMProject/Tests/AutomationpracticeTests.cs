@@ -54,7 +54,7 @@ namespace POMProject.Tests
             _user = UserFactory.CreateInvalidZipUser();
             _regPage.Navigate(_signInPage);
             _regPage.FillForm(_user);
-            //No time left for the rest of the tasks
+            _regPage.AssertInvalidZIPRegistration();
         }
 
         [Test]
