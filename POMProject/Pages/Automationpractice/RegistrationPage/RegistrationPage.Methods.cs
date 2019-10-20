@@ -1,8 +1,5 @@
 ﻿using POMProject.Users;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 
 namespace POMProject.Pages.Automationpractice.RegistrationPage
 {
@@ -11,7 +8,6 @@ namespace POMProject.Pages.Automationpractice.RegistrationPage
 
         public void FillForm(RegistrationUser user)
         {
-            Thread.Sleep(TimeSpan.FromSeconds(3));
             RadioButtons.Click();
             CustomerFirstName.SendKeys(user.FirstName);
             CustomerLastName.SendKeys(user.LastName);
