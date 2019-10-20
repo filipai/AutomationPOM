@@ -50,13 +50,13 @@ namespace POMProject.Common
             };
         }
 
-        public static RegistrationUser CreateInvalidYearUser()
+        public static RegistrationUser CreateInvalidFirstnameUser()
         {
             return new RegistrationUser
             {
-                FirstName = "Ventsi",
+                FirstName = "",
                 LastName = "Batman",
-                Year = "2019",
+                Year = "1990",
                 Month = "3",
                 Date = "3",
                 Password = "gdsjafgujdsw",

@@ -8,5 +8,10 @@ namespace POMProject.Pages.Automationpractice.RegistrationPage
         {
             Assert.AreEqual("The Zip/Postal code you've entered is invalid. It must follow this format: 00000", ErrorMsg.Text);
         }
+
+        public void AssertInvalidFirstNameRegistration()
+        {
+            Assert.AreEqual("firstname is required.", ErrorMsg.Text);
+        }
     }
 }

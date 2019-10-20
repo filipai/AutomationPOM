@@ -58,12 +58,12 @@ namespace POMProject.Tests
         }
 
         [Test]
-        public void InvalidYearRegistration()
+        public void InvalidFirstNameRegistration()
         {
-            _user = UserFactory.CreateInvalidYearUser();
+            _user = UserFactory.CreateInvalidFirstnameUser();
             _regPage.Navigate(_signInPage);
             _regPage.FillForm(_user);
-            //No time left for the rest of the tasks
+            _regPage.AssertInvalidFirstNameRegistration();
         }
 
         [TearDown]
