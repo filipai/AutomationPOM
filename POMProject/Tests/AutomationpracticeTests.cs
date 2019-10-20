@@ -17,6 +17,7 @@ namespace POMProject.Tests
         private SignInPage _signInPage;
         private RegistrationPage _regPage;
         private RegistrationUser _user;
+        private MyAccountPage _myAccount;
 
         [SetUp]
         public void CalssInit()
@@ -27,6 +28,7 @@ namespace POMProject.Tests
             _automationpracticePage = new AutomationpracticePage(_driver);
             _signInPage = new SignInPage(_driver);
             _regPage = new RegistrationPage(_driver);
+            _myAccount = new MyAccountPage(_driver);
         }
 
         [Test]
@@ -43,7 +45,7 @@ namespace POMProject.Tests
             _user = UserFactory.CreateValidUser();
             _regPage.Navigate(_signInPage);
             _regPage.FillForm(_user);
-            
+            _myAccount.AssertUserIsRegistered();
         }
 
         [Test]
@@ -56,7 +58,7 @@ namespace POMProject.Tests
         }
 
         [Test]
-        public void InvalidYearCodeRegistration()
+        public void InvalidYearRegistration()
         {
             _user = UserFactory.CreateInvalidYearUser();
             _regPage.Navigate(_signInPage);
